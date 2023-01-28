@@ -19,4 +19,9 @@
           class="pav.zar.springlearning.HipHopMusic">
     </bean>
 
+    <bean id="musicPlayer"
+          class="pav.zar.springlearning.MusicPlayer">
+        <constructor-arg ref="classicalMusicBean"/>
+    </bean>
+
 </beans>
