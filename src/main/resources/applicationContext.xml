@@ -10,7 +10,7 @@
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
     <bean id="classicalMusicBean"
-          class="pav.zar.springlearning.ClassicalMusic">
+          class="pav.zar.springlearning.ClassicalMusic" factory-method="getClassicalMusic">
     </bean>
 
     <bean id="rockMusicBean"
