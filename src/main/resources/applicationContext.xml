@@ -22,7 +22,7 @@
     </bean>
 
     <bean id="musicPlayer"
-          class="pav.zar.springlearning.MusicPlayer">
+          class="pav.zar.springlearning.MusicPlayer" scope="prototype">
         <property name="music" ref="classicalMusicBean"/>
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
@@ -34,6 +34,7 @@
                 <ref bean="hipHopMusicBean"/>
             </list>
         </property>
+
     </bean>
 
 
