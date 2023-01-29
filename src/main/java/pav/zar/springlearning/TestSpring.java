@@ -5,19 +5,32 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class TestSpring {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-        MusicPlayer firstMusicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
-        MusicPlayer secondMusicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
 
-        boolean comparison = firstMusicPlayer == secondMusicPlayer;
+        ClassicalMusic classicalMusic = context.getBean("classicalMusicBean", ClassicalMusic.class);
+        System.out.println(classicalMusic.getSong());
 
-        System.out.println(comparison);
+//        RockMusic rockMusic = context.getBean("rockMusicBean", RockMusic.class);
+//        RockMusic rockMusic2 = context.getBean("rockMusicBean", RockMusic.class);
+//
+//        System.out.println(rockMusic.getSong());
+//        System.out.println(rockMusic2.getSong());
 
-        System.out.println(firstMusicPlayer);
-        System.out.println(secondMusicPlayer);
+//        System.out.println(classicalMusic.getSong());
 
-        firstMusicPlayer.setVolume(10);
-        System.out.println(firstMusicPlayer.getVolume());
-        System.out.println(secondMusicPlayer.getVolume());
+
+//        MusicPlayer firstMusicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+//        MusicPlayer secondMusicPlayer = context.getBean("musicPlayer", MusicPlayer.class);
+
+//        boolean comparison = firstMusicPlayer == secondMusicPlayer;
+//
+//        System.out.println(comparison);
+//
+//        System.out.println(firstMusicPlayer);
+//        System.out.println(secondMusicPlayer);
+//
+//        firstMusicPlayer.setVolume(10);
+//        System.out.println(firstMusicPlayer.getVolume());
+//        System.out.println(secondMusicPlayer.getVolume());
 
 
 //        musicPlayer.playMusic();
