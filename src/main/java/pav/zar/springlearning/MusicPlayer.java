@@ -6,11 +6,6 @@ import java.util.List;
 public class MusicPlayer {
 
     private Music music;
-    private List<Music> musicList;
-
-    public void setMusicList(List<Music> musicList) {
-        this.musicList = musicList;
-    }
 
     public String getName() {
         return name;
@@ -47,9 +42,4 @@ public class MusicPlayer {
         System.out.println("Playing: " + music.getSong());
     }
 
-    public void playMusicList() {
-        for (Music music : musicList) {
-            System.out.println("Playing: " + music.getSong());
-        }
-    }
 }
