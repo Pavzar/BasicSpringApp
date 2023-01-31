@@ -1,5 +1,8 @@
 package pav.zar.springlearning;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class RockMusic implements Music{
 
     @Override
@@ -7,12 +10,5 @@ public class RockMusic implements Music{
         return "Wind cries Mary";
     }
 
-//    public void doMyInit(){
-//        System.out.println("Doing my initialization");
-//    }
-//
-//    public void doMyDestroy(){
-//        System.out.println("Doing my destruction");
-//    }
 
 }

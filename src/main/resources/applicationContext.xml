@@ -7,35 +7,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:musicPlayer.properties"/>
-
-    <bean id="classicalMusicBean"
-          class="pav.zar.springlearning.ClassicalMusic" factory-method="getClassicalMusic">
-    </bean>
-
-    <bean id="rockMusicBean"
-          class="pav.zar.springlearning.RockMusic">
-    </bean>
-
-    <bean id="hipHopMusicBean"
-          class="pav.zar.springlearning.HipHopMusic">
-    </bean>
-
-    <bean id="musicPlayer"
-          class="pav.zar.springlearning.MusicPlayer" scope="prototype">
-        <property name="music" ref="classicalMusicBean"/>
-        <property name="name" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
-
-        <property name="musicList">
-            <list value-type="pav.zar.springlearning.Music">
-                <ref bean="rockMusicBean"/>
-                <ref bean="classicalMusicBean"/>
-                <ref bean="hipHopMusicBean"/>
-            </list>
-        </property>
-
-    </bean>
+        <context:component-scan base-package="pav.zar.springlearning"/>
 
 
 </beans>
