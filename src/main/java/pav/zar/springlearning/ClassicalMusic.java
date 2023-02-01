@@ -10,7 +10,7 @@ import java.util.List;
 
 @Component
 //@Scope("singleton")
-//@Scope("prototype")
+@Scope("prototype")
 public class  ClassicalMusic implements Music {
     @PostConstruct
     public void doMyInit(){
