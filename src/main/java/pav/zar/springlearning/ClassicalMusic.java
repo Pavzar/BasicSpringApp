@@ -1,12 +1,28 @@
 package pav.zar.springlearning;
 
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
 import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class ClassicalMusic implements Music {
+//@Scope("singleton")
+//@Scope("prototype")
+public class  ClassicalMusic implements Music {
+    @PostConstruct
+    public void doMyInit(){
+        System.out.println("Do my initialization");
+    }
+
+    @PreDestroy
+    public void doMyDestroy(){
+        System.out.println("Do my destroy");
+    }
+
+
     private List<String> classicalMusicSongs = new ArrayList<>();
 
     //init block
